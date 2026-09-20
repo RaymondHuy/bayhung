@@ -20,7 +20,7 @@
 └── chinh-sach-bao-mat/
 ```
 
-Trên GitHub Pages của repository hiện tại, các đường dẫn trên có tiền tố `/bayhung.github.io/`. `data/site.json` là nguồn cấu hình URL chính thức. Sitemap chỉ chứa URL canonical của 15 trang, không chứa URL bộ lọc, trang lỗi hoặc `lastmod` được suy đoán.
+Trên GitHub Pages của repository hiện tại, các đường dẫn trên có tiền tố `/bayhung/`. `data/site.json` là nguồn cấu hình URL chính thức. Sitemap chỉ chứa URL canonical của 15 trang, không chứa URL bộ lọc, trang lỗi hoặc `lastmod` được suy đoán.
 
 ## Chủ đề nội dung
 

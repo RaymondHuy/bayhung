@@ -12,7 +12,7 @@ npm run build
 npm run preview
 ```
 
-Mở <http://127.0.0.1:4173/bayhung.github.io/>. Lệnh preview phục vụ thư mục `dist`; sau khi sửa dữ liệu hoặc mã nguồn, chạy lại `npm run build` và tải lại trình duyệt.
+Mở <http://127.0.0.1:4173/bayhung/>. Lệnh preview phục vụ thư mục `dist`; sau khi sửa dữ liệu hoặc mã nguồn, chạy lại `npm run build` và tải lại trình duyệt. Nếu đổi `siteUrl`, dừng và chạy lại `npm run preview` để máy chủ nhận đường dẫn mới.
 
 ```sh
 npm run check
@@ -61,7 +61,7 @@ Giữ `slug` ổn định để tránh làm hỏng liên kết đã được chi
 
 ## Xuất bản
 
-Với repository **`RaymondHuy/bayhung.github.io`**, URL GitHub Pages mặc định là **<https://raymondhuy.github.io/bayhung.github.io/>**. Đây là project site, nên đường dẫn `/bayhung.github.io/` là một phần của URL.
+Với repository **`RaymondHuy/bayhung`**, URL GitHub Pages mặc định là **<https://raymondhuy.github.io/bayhung/>**. Đây là project site, nên đường dẫn `/bayhung/` là một phần của URL. `siteUrl` trong `data/site.json` phải khớp địa chỉ này để CSS, ảnh, liên kết và các URL SEO được tạo đúng.
 
 Đã có workflow [.github/workflows/deploy.yml](.github/workflows/deploy.yml). Khi chọn GitHub Pages làm nơi xuất bản, đặt **Settings → Pages → Source → GitHub Actions**. Push lên nhánh `main` sẽ kích hoạt build và deploy; cũng có thể chạy workflow thủ công trong thẻ Actions. Mã nguồn được chuẩn bị sẵn, việc có workflow không đồng nghĩa website đã được xuất bản.
 

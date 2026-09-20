@@ -9,7 +9,7 @@ Chỉnh các trường trong `data/site.json`, sau đó build lại bằng `npm 
 | Trường | Thông tin cần điền |
 | --- | --- |
 | `name` | Tên thương hiệu nhất quán: Bảy Hưng. |
-| `siteUrl` | URL xuất bản chính thức, ví dụ `https://raymondhuy.github.io/bayhung.github.io`. |
+| `siteUrl` | URL xuất bản chính thức, hiện là `https://raymondhuy.github.io/bayhung`. |
 | `serviceArea` | Khu vực phục vụ thực tế, hiện là `TP.HCM`. |
 | `phone` | Số điện thoại kinh doanh có người tiếp nhận. |
 | `zalo` | Đường dẫn Zalo chính thức, đã thử mở trên điện thoại. |
@@ -25,7 +25,7 @@ Chỉnh các trường trong `data/site.json`, sau đó build lại bằng `npm 
 
 ## 2. Chuẩn bị xuất bản
 
-Với remote `RaymondHuy/bayhung.github.io`, URL Pages mặc định là **`https://raymondhuy.github.io/bayhung.github.io/`**. Đây là project site; tên repository `bayhung.github.io` không tự tạo ra tên miền `bayhung.github.io`. Nếu đổi tên repository hoặc dùng tên miền riêng, cập nhật `siteUrl` và build lại. [Cách GitHub đặt URL Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
+Với remote `RaymondHuy/bayhung`, URL Pages mặc định là **`https://raymondhuy.github.io/bayhung/`**. Đây là project site, nên URL gồm tên tài khoản và tên repository. Nếu đổi tên repository hoặc dùng tên miền riêng, cập nhật `siteUrl` và build lại; nếu đang chạy preview, khởi động lại máy chủ để nhận đường dẫn mới. [Cách GitHub đặt URL Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
 
 GitHub có giới hạn sử dụng Pages đối với online business, thương mại điện tử và website chủ yếu phục vụ giao dịch thương mại. Website bán sỉ cần xem xét điều kiện này trước khi chọn nơi xuất bản chính thức; không có giỏ hàng vẫn chưa đủ để kết luận được phép. Bộ mã tĩnh có thể chuyển sang dịch vụ hosting phù hợp. [Giới hạn sử dụng GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits).
 
@@ -42,15 +42,15 @@ Workflow chỉ cấp quyền đọc mã cho job build, và quyền triển khai 
 ## 3. Đưa website vào Google Search Console
 
 1. Mở [Google Search Console](https://search.google.com/search-console) bằng tài khoản Google của chủ website.
-2. Thêm tài sản dạng **URL prefix** với URL đầy đủ, gồm cả `/bayhung.github.io/` nếu dùng địa chỉ Pages mặc định.
+2. Thêm tài sản dạng **URL prefix** với URL đầy đủ `https://raymondhuy.github.io/bayhung/` nếu dùng địa chỉ Pages hiện tại.
 3. Chọn xác minh bằng **HTML tag**, chép giá trị `content` vào `googleSiteVerification` trong `data/site.json`.
 4. Build và xuất bản lại, rồi chọn **Verify**. Giữ lại mã xác minh trong các lần cập nhật sau. [Hướng dẫn xác minh quyền sở hữu](https://support.google.com/webmasters/answer/9008080?hl=vi).
-5. Trong **Sitemaps**, gửi `sitemap.xml` tại URL website; với cấu hình mặc định là `https://raymondhuy.github.io/bayhung.github.io/sitemap.xml`.
+5. Trong **Sitemaps**, gửi `sitemap.xml` tại URL website; với cấu hình hiện tại là `https://raymondhuy.github.io/bayhung/sitemap.xml`.
 6. Dùng **URL Inspection → Test live URL** cho trang chủ, danh mục, một sản phẩm và một bài cẩm nang. Có thể yêu cầu lập chỉ mục cho các URL quan trọng.
 
 Sitemap chỉ chứa URL chuẩn, có thể truy cập và muốn xuất hiện trên Google; không thêm trang 404 hoặc URL bộ lọc trùng nội dung. Gửi sitemap giúp Google phát hiện trang, không bảo đảm lập chỉ mục. [Hướng dẫn sitemap của Google](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap).
 
-**Riêng `robots.txt`:** Google đọc tệp này tại gốc hostname, ví dụ `https://raymondhuy.github.io/robots.txt`. Tệp nằm tại `/bayhung.github.io/robots.txt` không điều khiển crawl cho project site. Khi không quản lý được gốc hostname, gửi sitemap trực tiếp qua Search Console; nếu có site gốc, kiểm tra nó không chặn đường dẫn project. Với tên miền riêng, đặt `robots.txt` ngay tại gốc tên miền. [Vị trí robots.txt](https://developers.google.com/crawling/docs/robots-txt/create-robots-txt).
+**Riêng `robots.txt`:** Google đọc tệp này tại gốc hostname, ví dụ `https://raymondhuy.github.io/robots.txt`. Tệp nằm tại `/bayhung/robots.txt` không điều khiển crawl cho project site. Khi không quản lý được gốc hostname, gửi sitemap trực tiếp qua Search Console; nếu có site gốc, kiểm tra nó không chặn đường dẫn project. Với tên miền riêng, đặt `robots.txt` ngay tại gốc tên miền. [Vị trí robots.txt](https://developers.google.com/crawling/docs/robots-txt/create-robots-txt).
 
 ## 4. Kiểm tra sau khi xuất bản
 
