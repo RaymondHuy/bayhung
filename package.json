@@ -1,0 +1,25 @@
+{
+  "name": "bay-hung-fruit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Website tĩnh Bảy Hưng, trái cây nhập khẩu bán sỉ tại TP.HCM",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "preview": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "test:browser": "node scripts/browser-test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@fontsource/be-vietnam-pro": "^5.3.0",
+    "@phosphor-icons/core": "^2.1.1",
+    "lighthouse": "^13.5.0",
+    "playwright": "^1.63.0",
+    "sharp": "^0.35.4"
+  }
+}

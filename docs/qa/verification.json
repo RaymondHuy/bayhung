@@ -1,0 +1,24 @@
+{
+  "testedAt": "2026-09-20T08:53:14.048Z",
+  "url": "http://127.0.0.1:4173/bayhung.github.io/",
+  "environment": "Local preview with gzip compression; Lighthouse simulated mobile; not field performance or a production crawl.",
+  "lighthouseVersion": "13.5.0",
+  "scores": {
+    "performance": 96,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "metrics": {
+    "FCP": "1.7 s",
+    "LCP": "2.7 s",
+    "CLS": "0",
+    "TBT": "0 ms"
+  },
+  "pages": {
+    "indexable": 15,
+    "errorPages": 1
+  },
+  "browserChecks": "Desktop 1440px, mobile 390px, core routes, zero serious/critical axe failures, filters/search, draft quotation + clipboard, dark persistence, reduced motion, no-JavaScript routes, no client exceptions passed.",
+  "contactFixture": "Passed temporary root-domain build with formatted phone, Zalo, email, address, Search Console; real fields remain blank."
+}

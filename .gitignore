@@ -427,3 +427,10 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Bảy Hưng static site output and local reports
+dist/
+.seo-cache/
+test-results/
+playwright-report/
+.DS_Store
