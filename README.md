@@ -53,7 +53,7 @@ Biểu mẫu hỏi giá tạo **nội dung nháp trên trình duyệt**, cho ph�
 
 ## Cập nhật sản phẩm và cẩm nang
 
-- [data/catalog.json](data/catalog.json): sáu nhóm trái cây, nội dung sản phẩm, ảnh, mô tả SEO và nhãn giá. Giữ `priceLabel` là `Liên hệ`; xác nhận giống, xuất xứ, quy cách và tình trạng hàng theo từng lô.
+- [data/catalog.json](data/catalog.json): 10 nhóm trái cây, nội dung sản phẩm, ảnh, mô tả SEO và nhãn giá. Giữ `priceLabel` là `Liên hệ`; xác nhận giống, xuất xứ, quy cách và tình trạng hàng theo từng lô.
 - [data/guides.json](data/guides.json): ba bài cẩm nang; mỗi bài gồm tiêu đề, mô tả và các phần nội dung. Bổ sung nguồn khi có thông tin cần dẫn chứng.
 - `assets/images/`: ảnh dùng cho website. Ảnh hiện tại là ảnh minh họa; nên thay bằng ảnh thực tế của Bảy Hưng khi có.
 

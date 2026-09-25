@@ -1,6 +1,6 @@
 # Cấu trúc website Bảy Hưng
 
-15 trang có thể lập chỉ mục, cộng một trang 404 có `noindex`. Mỗi trang được tạo thành HTML đầy đủ, có tiêu đề và mô tả riêng, canonical tuyệt đối, ảnh chia sẻ và dữ liệu JSON-LD.
+19 trang có thể lập chỉ mục, cộng một trang 404 có `noindex`. Mỗi trang được tạo thành HTML đầy đủ, có tiêu đề và mô tả riêng, canonical tuyệt đối, ảnh chia sẻ và dữ liệu JSON-LD.
 
 ```text
 /
@@ -10,7 +10,11 @@
 │   ├── cherry-nhap-khau/
 │   ├── kiwi-nhap-khau/
 │   ├── cam-nhap-khau/
-│   └── le-nhap-khau/
+│   ├── le-nhap-khau/
+│   ├── nhan-xuong/
+│   ├── xoai-cat-hoa-loc/
+│   ├── hong/
+│   └── thanh-long/
 ├── gioi-thieu/
 ├── cam-nang/
 │   ├── kinh-nghiem-nhap-trai-cay-si/
@@ -20,12 +24,12 @@
 └── chinh-sach-bao-mat/
 ```
 
-Trên GitHub Pages của repository hiện tại, các đường dẫn trên có tiền tố `/bayhung/`. `data/site.json` là nguồn cấu hình URL chính thức. Sitemap chỉ chứa URL canonical của 15 trang, không chứa URL bộ lọc, trang lỗi hoặc `lastmod` được suy đoán.
+Trên GitHub Pages của repository hiện tại, các đường dẫn trên có tiền tố `/bayhung/`. `data/site.json` là nguồn cấu hình URL chính thức. Sitemap chỉ chứa URL canonical của 19 trang, không chứa URL bộ lọc, trang lỗi hoặc `lastmod` được suy đoán.
 
 ## Chủ đề nội dung
 
 - Trang chủ và giới thiệu: trái cây nhập khẩu bán sỉ, Bảy Hưng, TP.HCM.
-- Danh mục và từng nhóm trái: loại trái + nhập khẩu/bán sỉ, đặc điểm chung và thông tin cần xác nhận khi nhập hàng.
+- Danh mục và từng nhóm trái: loại trái + bán sỉ (chỉ dùng “nhập khẩu” với nhóm hàng tương ứng), đặc điểm chung và thông tin cần xác nhận khi nhập hàng.
 - Cẩm nang: nhập trái cây sỉ, bảo quản và chọn danh mục cho cửa hàng.
 - Liên hệ: chuẩn bị nhu cầu và liên hệ nhận báo giá.
 

@@ -1,0 +1,41 @@
+NGUỒN ẢNH MINH HỌA BẢY HƯNG
+Cập nhật: 25/09/2026
+
+Các ảnh dưới đây dùng để minh họa nhóm trái cây, không phải ảnh lô hàng của Bảy Hưng.
+Không dùng ảnh để khẳng định xuất xứ, giống hoặc tình trạng sẵn hàng.
+Tất cả được lưu tại assets/images/ dưới dạng WebP 800 × 800 px.
+
+1. nhan-xuong.webp
+Ảnh nguồn: Longan fruits.jpg
+Tác giả: Dinkum
+Nguồn: https://commons.wikimedia.org/wiki/File:Longan_fruits.jpg
+Giấy phép: CC0 1.0 https://creativecommons.org/publicdomain/zero/1.0/
+Thay đổi: giảm kích thước, cắt nhẹ nền vào khung vuông, chuyển WebP.
+Nguồn chỉ xác nhận là nhãn; không xác nhận giống nhãn xuồng.
+
+2. xoai-cat-hoa-loc.webp
+Ảnh nguồn: Bữa ăn chiều tối ng31th5n2020 (dĩa xoài cát Hòa Lộc) (1).jpg
+Tác giả: Phương Huy
+Nguồn: https://commons.wikimedia.org/w/index.php?curid=137697216
+Giấy phép: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
+Thay đổi: xoay theo hướng EXIF, giảm kích thước xuống 600 × 800 px,
+thêm 100 px nền trắng mỗi bên và chuyển WebP; không cắt nội dung ảnh.
+Bản ảnh đã tối ưu này được cung cấp theo CC BY-SA 4.0.
+Việc sử dụng ảnh không ngụ ý tác giả xác nhận hoặc bảo trợ cho Bảy Hưng.
+
+3. hong.webp
+Ảnh nguồn: Persimmon 2017 B3.jpg
+Tác giả: Fructibus
+Nguồn: https://commons.wikimedia.org/wiki/File:Persimmon_2017_B3.jpg
+Giấy phép: CC0 1.0 https://creativecommons.org/publicdomain/zero/1.0/
+Thay đổi: giảm kích thước, cắt nền vào khung vuông, chuyển WebP.
+
+4. thanh-long.webp
+Ảnh nguồn: A dragon fruit.jpg
+Tác giả: Helga Kattinger
+Nguồn: https://commons.wikimedia.org/wiki/File:A_dragon_fruit.jpg
+Giấy phép: CC0 1.0 https://creativecommons.org/publicdomain/zero/1.0/
+Thay đổi: giảm kích thước, thêm nền trắng để giữ trọn trái, chuyển WebP.
+
+Ảnh chính và sáu ảnh trái cây nhập khẩu ban đầu được tạo bằng imagegen.
+Thông tin nguồn và prompt được lưu trong docs/ASSETS.md và docs/product-image-prompts.md của mã nguồn.

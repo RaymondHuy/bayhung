@@ -21,3 +21,5 @@
 /* Keep navigation usable even when JavaScript is disabled. */
 html:not(.js) .theme-button,html:not(.js) .menu-button{display:none!important}
 @media(max-width:767px){html:not(.js) .header-inner{height:auto;flex-wrap:wrap;padding-block:15px}html:not(.js) .primary-nav{display:flex;position:static;order:3;flex-basis:100%;flex-wrap:wrap;padding:5px 0 0;gap:5px 20px;border:0;box-shadow:none}html:not(.js) .primary-nav>a{font-size:11px;padding:6px 0}html:not(.js) .primary-nav .mobile-contact{gap:10px}}
+
+.photo-credit{display:block;margin-top:12px;color:var(--muted);font-size:10px;line-height:1.7}.photo-credit a{text-decoration:underline;text-underline-offset:2px}
