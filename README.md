@@ -24,7 +24,7 @@ npm run test:browser
 
 ## Thay thông tin liên hệ
 
-Chỉnh [data/site.json](data/site.json). Các trường điện thoại, Zalo, email và địa chỉ hiện để trống để chủ cơ sở bổ sung thông tin thật.
+Chỉnh [data/site.json](data/site.json). Số điện thoại liên hệ hiện là **0938879795**. Zalo được để trống và ẩn khỏi giao diện; email và địa chỉ có thể bổ sung sau.
 
 | Trường | Cách sử dụng |
 | --- | --- |
@@ -32,24 +32,24 @@ Chỉnh [data/site.json](data/site.json). Các trường điện thoại, Zalo, 
 | `siteUrl` | URL chính thức, gồm đường dẫn project nếu có. |
 | `serviceArea` | Khu vực hoạt động; hiện là `TP.HCM`. |
 | `phone` | Số điện thoại để khách bấm gọi. |
-| `zalo` | URL đầy đủ dạng `https://zalo.me/<số-điện-thoại>`. |
+| `zalo` | Không sử dụng: để trống để ẩn toàn bộ mục liên hệ Zalo. |
 | `email`, `address` | Thông tin kinh doanh được phép công khai; có thể để trống. |
 | `googleSiteVerification` | Giá trị `content` của thẻ xác minh Google Search Console. |
 | `socialLinks` | Danh sách URL trang mạng xã hội chính thức; mặc định `[]`. |
 | `copyrightYear` | Năm hiển thị ở chân trang. |
 
-Ví dụ minh họa cho hai trường cần điền — **đây không phải số liên hệ của Bảy Hưng**:
+Cấu hình liên hệ hiện tại:
 
 ```json
 {
-  "phone": "0900000000",
-  "zalo": "https://zalo.me/0900000000"
+  "phone": "0938879795",
+  "zalo": ""
 }
 ```
 
-Thay bằng thông tin thật trong file hiện có, giữ nguyên các trường khác và chạy `npm run build`. Khi thông tin còn trống, giao diện không tạo liên kết gọi điện hoặc Zalo giả.
+Khi thay thông tin trong file hiện có, giữ nguyên các trường khác và chạy `npm run build`. Số điện thoại xuất hiện tại trang Liên hệ, chân trang và dữ liệu có cấu trúc; khách có thể bấm để gọi.
 
-Biểu mẫu hỏi giá tạo **nội dung nháp trên trình duyệt**, cho phép sao chép để gửi. Website không có máy chủ nhận đơn hay lưu khách hàng. Khi đã cấu hình Zalo, nút liên hệ mở kênh Zalo; khách vẫn tự gửi tin nhắn.
+Biểu mẫu hỏi giá tạo **nội dung nháp trên trình duyệt**, cho phép sao chép để dùng khi trao đổi. Website không có máy chủ nhận đơn hay lưu khách hàng. Khách có thể gọi số điện thoại trên trang Liên hệ để hỏi giá.
 
 ## Cập nhật sản phẩm và cẩm nang
 
