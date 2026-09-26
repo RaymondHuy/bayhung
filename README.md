@@ -12,7 +12,7 @@ npm run build
 npm run preview
 ```
 
-Mở <http://127.0.0.1:4173/bayhung/>. Lệnh preview phục vụ thư mục `dist`; sau khi sửa dữ liệu hoặc mã nguồn, chạy lại `npm run build` và tải lại trình duyệt. Nếu đổi `siteUrl`, dừng và chạy lại `npm run preview` để máy chủ nhận đường dẫn mới.
+Mở <http://127.0.0.1:4173/>. Lệnh preview phục vụ thư mục `dist`; sau khi sửa dữ liệu hoặc mã nguồn, chạy lại `npm run build` và tải lại trình duyệt. Nếu đổi `siteUrl`, dừng và chạy lại `npm run preview` để máy chủ nhận đường dẫn mới.
 
 ```sh
 npm run check
@@ -61,13 +61,13 @@ Giữ `slug` ổn định để tránh làm hỏng liên kết đã được chi
 
 ## Xuất bản
 
-Với repository **`RaymondHuy/bayhung`**, URL GitHub Pages mặc định là **<https://raymondhuy.github.io/bayhung/>**. Đây là project site, nên đường dẫn `/bayhung/` là một phần của URL. `siteUrl` trong `data/site.json` phải khớp địa chỉ này để CSS, ảnh, liên kết và các URL SEO được tạo đúng.
+Website dùng tên miền riêng **<https://7hung.io.vn/>**, được xuất bản từ repository **`RaymondHuy/bayhung`** trên GitHub Pages. `siteUrl` trong `data/site.json` là `https://7hung.io.vn`; các trang và tài nguyên bắt đầu từ gốc tên miền, ví dụ `/san-pham/` và `/assets/`. Cấu hình này được dùng để tạo CSS, ảnh, liên kết và các URL SEO đúng địa chỉ mới.
 
-Đã có workflow [.github/workflows/deploy.yml](.github/workflows/deploy.yml). Khi chọn GitHub Pages làm nơi xuất bản, đặt **Settings → Pages → Source → GitHub Actions**. Push lên nhánh `main` sẽ kích hoạt build và deploy; cũng có thể chạy workflow thủ công trong thẻ Actions. Mã nguồn được chuẩn bị sẵn, việc có workflow không đồng nghĩa website đã được xuất bản.
+Đã có workflow [.github/workflows/deploy.yml](.github/workflows/deploy.yml). Trong **Settings → Pages**, đặt **Source → GitHub Actions**, **Custom domain → `7hung.io.vn`** và bật **Enforce HTTPS** khi GitHub cho phép. Push lên nhánh `main` sẽ kích hoạt build và deploy; cũng có thể chạy workflow thủ công trong thẻ Actions.
 
 Xem [checklist SEO và xuất bản](docs/SEO-CHECKLIST.md) trước khi đưa website lên mạng: tài liệu bao gồm giới hạn sử dụng Pages cho website kinh doanh, cấu hình URL, Search Console, sitemap và các bước kiểm tra sau triển khai.
 
-Để dùng tên miền riêng hoặc hosting tĩnh khác, đổi `siteUrl`, chạy lại `npm run build` và đưa **nội dung thư mục `dist`** lên host. Với tên miền riêng, cấu hình DNS và tên miền theo nhà cung cấp. Không cần backend hay cơ sở dữ liệu.
+Khi chuyển sang tên miền hoặc hosting tĩnh khác, đổi `siteUrl`, chạy lại `npm run build` và đưa **nội dung thư mục `dist`** lên host. Cập nhật DNS và cấu hình tên miền tương ứng. Không cần backend hay cơ sở dữ liệu.
 
 ## Thiết kế và SEO
 

@@ -24,7 +24,7 @@
 └── chinh-sach-bao-mat/
 ```
 
-Trên GitHub Pages của repository hiện tại, các đường dẫn trên có tiền tố `/bayhung/`. `data/site.json` là nguồn cấu hình URL chính thức. Sitemap chỉ chứa URL canonical của 19 trang, không chứa URL bộ lọc, trang lỗi hoặc `lastmod` được suy đoán.
+Tên miền chính thức là `https://7hung.io.vn/`; các đường dẫn trên bắt đầu từ gốc tên miền, ví dụ `https://7hung.io.vn/san-pham/`. `data/site.json` là nguồn cấu hình URL chính thức. Sitemap chỉ chứa URL canonical của 19 trang, không chứa URL bộ lọc, trang lỗi hoặc `lastmod` được suy đoán.
 
 ## Chủ đề nội dung
 
@@ -37,4 +37,4 @@ Trang nhóm trái cây mô tả nhóm sản phẩm, không phải một SKU có 
 
 ## Sau khi xuất bản
 
-Kiểm tra URL thực tế và submit sitemap qua Google Search Console theo [SEO-CHECKLIST.md](SEO-CHECKLIST.md). Bổ sung số liên hệ và ảnh hàng thật khi có. Việc Google lập chỉ mục và thứ hạng phụ thuộc vào nhiều yếu tố ngoài mã nguồn; không có bảo đảm lên top.
+Kiểm tra URL thực tế và submit sitemap qua Google Search Console theo [SEO-CHECKLIST.md](SEO-CHECKLIST.md). Số liên hệ hiện tại là `0938879795`; bổ sung ảnh hàng thật khi có. Việc Google lập chỉ mục và thứ hạng phụ thuộc vào nhiều yếu tố ngoài mã nguồn; không có bảo đảm lên top.

@@ -9,15 +9,15 @@ Chỉnh các trường trong `data/site.json`, sau đó build lại bằng `npm 
 | Trường | Thông tin cần điền |
 | --- | --- |
 | `name` | Tên thương hiệu nhất quán: Bảy Hưng. |
-| `siteUrl` | URL xuất bản chính thức, hiện là `https://raymondhuy.github.io/bayhung`. |
+| `siteUrl` | URL xuất bản chính thức, hiện là `https://7hung.io.vn`. |
 | `serviceArea` | Khu vực phục vụ thực tế, hiện là `TP.HCM`. |
-| `phone` | Số điện thoại kinh doanh có người tiếp nhận. |
-| `zalo` | Đường dẫn Zalo chính thức, đã thử mở trên điện thoại. |
+| `phone` | Số điện thoại kinh doanh hiện tại: `0938879795`. |
+| `zalo` | Để trống; Bảy Hưng không hiển thị liên hệ qua Zalo. |
 | `email` | Email liên hệ thực tế, nếu sử dụng. |
 | `address` | Địa chỉ thực tế được phép công khai; để trống khi chưa có. |
 | `googleSiteVerification` | Chỉ chuỗi `content` từ thẻ xác minh Google Search Console. |
 
-- [ ] Thử nút điện thoại và Zalo trên máy thật sau khi điền thông tin.
+- [ ] Thử nút gọi số `0938879795` trên điện thoại thật.
 - [ ] Rà lại xuất xứ, giống, quy cách đóng gói và điều kiện nhập sỉ theo hàng thực tế. Không coi ảnh minh họa là cam kết về lô hàng.
 - [ ] Bổ sung ảnh do Bảy Hưng chụp: trái cây, thùng hàng, nhãn xuất xứ và quá trình chuẩn bị hàng. Che thông tin riêng của khách.
 - [ ] Viết rõ cách xác nhận đơn, giao nhận và xử lý vấn đề khi các chính sách đã được chủ cơ sở chốt.
@@ -25,37 +25,38 @@ Chỉnh các trường trong `data/site.json`, sau đó build lại bằng `npm 
 
 ## 2. Chuẩn bị xuất bản
 
-Với remote `RaymondHuy/bayhung`, URL Pages mặc định là **`https://raymondhuy.github.io/bayhung/`**. Đây là project site, nên URL gồm tên tài khoản và tên repository. Nếu đổi tên repository hoặc dùng tên miền riêng, cập nhật `siteUrl` và build lại; nếu đang chạy preview, khởi động lại máy chủ để nhận đường dẫn mới. [Cách GitHub đặt URL Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
+Website từ repository `RaymondHuy/bayhung` hiện dùng tên miền riêng **`https://7hung.io.vn/`**. Các trang bắt đầu từ gốc tên miền, ví dụ `https://7hung.io.vn/san-pham/`. `siteUrl` cần khớp tên miền chính thức, rồi build lại; nếu đang chạy preview, khởi động lại máy chủ và mở `http://127.0.0.1:4173/`. [Cấu hình tên miền riêng cho GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
 GitHub có giới hạn sử dụng Pages đối với online business, thương mại điện tử và website chủ yếu phục vụ giao dịch thương mại. Website bán sỉ cần xem xét điều kiện này trước khi chọn nơi xuất bản chính thức; không có giỏ hàng vẫn chưa đủ để kết luận được phép. Bộ mã tĩnh có thể chuyển sang dịch vụ hosting phù hợp. [Giới hạn sử dụng GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits).
 
 Khi đã chọn Pages phù hợp với mục đích sử dụng:
 
 1. Trong repository, mở **Settings → Pages → Build and deployment → Source → GitHub Actions**.
-2. Đưa mã nguồn và `package-lock.json` lên nhánh `main`.
-3. Workflow `.github/workflows/deploy.yml` sẽ dùng Node.js 24, chạy `npm ci`, `npm run build`, tải thư mục `dist` lên và triển khai.
-4. Có thể chạy lại tại **Actions → Deploy Bảy Hưng to GitHub Pages → Run workflow**.
-5. Kiểm tra URL hiển thị trong lần deploy thành công; bật HTTPS nếu giao diện Pages yêu cầu.
+2. Đặt **Custom domain → `7hung.io.vn`**, giữ DNS trỏ về GitHub Pages và bật **Enforce HTTPS** khi GitHub cho phép. Kiểm tra `http://7hung.io.vn/` chuyển đến `https://7hung.io.vn/`.
+3. Đưa mã nguồn và `package-lock.json` lên nhánh `main`.
+4. Workflow `.github/workflows/deploy.yml` sẽ dùng Node.js 24, chạy `npm ci`, `npm run build`, tải thư mục `dist` lên và triển khai.
+5. Có thể chạy lại tại **Actions → Deploy Bảy Hưng to GitHub Pages → Run workflow**.
+6. Sau khi deploy thành công, kiểm tra trang chủ và trang con tại `https://7hung.io.vn/`.
 
 Workflow chỉ cấp quyền đọc mã cho job build, và quyền triển khai Pages cho job deploy. Không cần token cá nhân. [Tài liệu workflow Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
 ## 3. Đưa website vào Google Search Console
 
 1. Mở [Google Search Console](https://search.google.com/search-console) bằng tài khoản Google của chủ website.
-2. Thêm tài sản dạng **URL prefix** với URL đầy đủ `https://raymondhuy.github.io/bayhung/` nếu dùng địa chỉ Pages hiện tại.
-3. Chọn xác minh bằng **HTML tag**, chép giá trị `content` vào `googleSiteVerification` trong `data/site.json`.
-4. Build và xuất bản lại, rồi chọn **Verify**. Giữ lại mã xác minh trong các lần cập nhật sau. [Hướng dẫn xác minh quyền sở hữu](https://support.google.com/webmasters/answer/9008080?hl=vi).
-5. Trong **Sitemaps**, gửi `sitemap.xml` tại URL website; với cấu hình hiện tại là `https://raymondhuy.github.io/bayhung/sitemap.xml`.
+2. Thêm tài sản mới dạng **URL prefix** với URL đầy đủ `https://7hung.io.vn/`. Tài sản cũ của địa chỉ `github.io` không thay thế tài sản tên miền mới.
+3. Nếu cần xác minh, chọn **HTML tag** và đối chiếu giá trị `content` với `googleSiteVerification` trong `data/site.json`; cập nhật nếu Google cấp mã khác.
+4. Nếu thay mã, build và xuất bản lại trước khi chọn **Verify**. Giữ lại mã xác minh trong các lần cập nhật sau. [Hướng dẫn xác minh quyền sở hữu](https://support.google.com/webmasters/answer/9008080?hl=vi).
+5. Trong **Sitemaps** của tài sản mới, gửi `sitemap.xml` (không có dấu `/` ở đầu); URL đầy đủ là `https://7hung.io.vn/sitemap.xml`.
 6. Dùng **URL Inspection → Test live URL** cho trang chủ, danh mục, một sản phẩm và một bài cẩm nang. Có thể yêu cầu lập chỉ mục cho các URL quan trọng.
 
 Sitemap chỉ chứa URL chuẩn, có thể truy cập và muốn xuất hiện trên Google; không thêm trang 404 hoặc URL bộ lọc trùng nội dung. Gửi sitemap giúp Google phát hiện trang, không bảo đảm lập chỉ mục. [Hướng dẫn sitemap của Google](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap).
 
-**Riêng `robots.txt`:** Google đọc tệp này tại gốc hostname, ví dụ `https://raymondhuy.github.io/robots.txt`. Tệp nằm tại `/bayhung/robots.txt` không điều khiển crawl cho project site. Khi không quản lý được gốc hostname, gửi sitemap trực tiếp qua Search Console; nếu có site gốc, kiểm tra nó không chặn đường dẫn project. Với tên miền riêng, đặt `robots.txt` ngay tại gốc tên miền. [Vị trí robots.txt](https://developers.google.com/crawling/docs/robots-txt/create-robots-txt).
+**`robots.txt`:** Với tên miền hiện tại, tệp được xuất bản đúng tại `https://7hung.io.vn/robots.txt` và khai báo sitemap `https://7hung.io.vn/sitemap.xml`. Kiểm tra tệp truy cập được và không chặn các trang công khai. [Vị trí robots.txt](https://developers.google.com/crawling/docs/robots-txt/create-robots-txt).
 
 ## 4. Kiểm tra sau khi xuất bản
 
 - [ ] Trang chủ, danh mục, sản phẩm và cẩm nang mở trực tiếp được; tải lại trang con không lỗi 404.
-- [ ] Ảnh, CSS, font và liên kết nội bộ hoạt động cả với đường dẫn project Pages.
+- [ ] Ảnh, CSS, font và liên kết nội bộ hoạt động tại `https://7hung.io.vn/`, không còn tiền tố `/bayhung/`.
 - [ ] Mỗi trang có title mô tả đúng nội dung, tiêu đề chính rõ ràng và mô tả riêng; không lặp dày các biến thể từ khóa. Google có thể tự chọn lại tiêu đề kết quả tìm kiếm. [Hướng dẫn title](https://developers.google.com/search/docs/appearance/title-link).
 - [ ] Canonical, Open Graph URL và sitemap đều dùng URL xuất bản thật. Canonical của trang sản phẩm trỏ về chính trang sản phẩm, không gom hết về trang chủ; không dùng `localhost`, URL xem trước hoặc dấu `#`. [Hướng dẫn canonical](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls).
 - [ ] Trang nội dung công khai không còn `noindex` ngoài ý muốn.
